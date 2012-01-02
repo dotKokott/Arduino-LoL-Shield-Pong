@@ -1,6 +1,8 @@
 #include "Charliplexing.h"
 #include "WProgram.h"
 
+class Game;
+
 class Player
 {
   public:
@@ -31,7 +33,8 @@ class Player
     
     void update() //called each loop, checks input, updates position etc.
     {
-      
+      //Read from potentiometer
+      // x = (1023 / 9) * pinRead?
     }
     
     void render() //called after update, draws panel on the shield
@@ -49,7 +52,6 @@ class Ball
     int posX, posY;
     int dirX,dirY;
     int ballSpeed;
-   
     Ball()
     {
       posX = 6;
@@ -63,7 +65,8 @@ class Ball
       checkCollision();
       posX += ballSpeed * dirX;
       posY += ballSpeed * dirY;
-    }
+      
+    }       
 
     void render()
     {
@@ -72,7 +75,7 @@ class Ball
   private:
     void checkCollision()
     {
-      if(posX += ballSpeed * dirX <= 0
+//      if(posX += ballSpeed * dirX <= 0
     }  
 };
 
@@ -82,24 +85,44 @@ class Game
     Player playerONE;
     Player playerTWO;
     Ball b;
+    
+    boolean gameRunning;
     void init()
-    {
+    {      
       playerONE.init(false);
       playerTWO.init(true);
+      b.init(this);
+      gameRunning = true;
     }
 
     void update()
     {
-      playerONE.update();
-      playerTWO.update();
-      b.update();
+      if(gameRunning)
+      {
+        playerONE.update();
+        playerTWO.update();
+        b.update();        
+      }
     }
     
     void render()
     {
+      if(gameRunning)
+      {
       playerONE.render();
       playerTWO.render();
       b.render();
+      }
+    }
+    
+    void ballPassed(boolean side)
+    {
+        
+    }
+    
+    void gameOver()
+    {
+      
     }	
 };
 
