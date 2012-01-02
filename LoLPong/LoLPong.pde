@@ -12,8 +12,8 @@ class Player
     Player()
     {
       score = 0;
-      panelSize = 3;
-      posY = 4;
+      panelSize = 13;
+      posY = 0;
     }
     
     void init(boolean playerSide)
@@ -72,7 +72,7 @@ class Ball
   private:
     void checkCollision()
     {
-      
+      if(posX += ballSpeed * dirX <= 0
     }  
 };
 
