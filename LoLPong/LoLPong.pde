@@ -90,8 +90,7 @@ class Game
     void init()
     {      
       playerONE.init(false);
-      playerTWO.init(true);
-      b.init(this);
+      playerTWO.init(true);      
       gameRunning = true;
     }
 
