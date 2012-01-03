@@ -1,8 +1,6 @@
 #include "Charliplexing.h"
 #include "WProgram.h"
 
-class Game;
-
 class Player
 {
   public:
@@ -75,7 +73,26 @@ class Ball
   private:
     void checkCollision()
     {
-//      if(posX += ballSpeed * dirX <= 0
+      
+      int expectedX = posX + ballSpeed * dirX;
+      int expectedY = posY + ballSpeed * dirY;
+      
+      if(expectedX <= 0)
+      {
+        //Player left point
+      }
+      
+      if(expectedX > 13)
+      {
+        //Player right point
+      }
+
+      //PanelCollisionDetection
+      
+      if((expectedY < 0) || (expectedY > 8))
+      {
+        dirY *= -1;
+      }      
     }  
 };
 
@@ -108,9 +125,9 @@ class Game
     {
       if(gameRunning)
       {
-      playerONE.render();
-      playerTWO.render();
-      b.render();
+        playerONE.render();
+        playerTWO.render();
+        b.render();
       }
     }
     
