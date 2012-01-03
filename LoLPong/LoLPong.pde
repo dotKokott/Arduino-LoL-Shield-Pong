@@ -44,25 +44,33 @@ class Player
     }      
 };
 
+class Game;
+
 class Ball
 {
   public:
     int posX, posY;
     int dirX,dirY;
     int ballSpeed;
+    Game* g;
     Ball()
     {
       posX = 6;
       posY = 2;
-      dirX = dirY = 1;
-      ballSpeed = 1;
+      dirX = 1; 
+      dirY = -1;
+    }
+   
+    void init(Game& game)
+    {
+       g = &game;
     } 
 
     void update()
     {
       checkCollision();
-      posX += ballSpeed * dirX;
-      posY += ballSpeed * dirY;
+      posX += dirX;
+      posY += dirY;
       
     }       
 
@@ -72,10 +80,9 @@ class Ball
     }
   private:
     void checkCollision()
-    {
-      
-      int expectedX = posX + ballSpeed * dirX;
-      int expectedY = posY + ballSpeed * dirY;
+    {      
+      int expectedX = posX + dirX;
+      int expectedY = posY + dirY;
       
       if(expectedX <= 0)
       {
@@ -89,10 +96,11 @@ class Ball
 
       //PanelCollisionDetection
       
-      if((expectedY < 0) || (expectedY > 8))
+      if((expectedY) < 0 || (expectedY) > 8)
       {
-        dirY *= -1;
-      }      
+        g.gameOver();
+        this->dirY = this->dirY * -1;
+      }       
     }  
 };
 
@@ -138,7 +146,7 @@ class Game
     
     void gameOver()
     {
-      
+      LedSign::Clear();
     }	
 };
 
