@@ -36,12 +36,12 @@ void Ball::checkCollision()
   
   if(expectedX <= 0)
   {
-    this->game->ballPassed(LEFT_PLAYER);
+    //this->game->ballPassed(LEFT_PLAYER);
   }
   
   if(expectedX > 13)
   {
-    this->game->ballPassed(RIGHT_PLAYER);
+    //this->game->ballPassed(RIGHT_PLAYER);
   }
 
   //PanelCollisionDetection

@@ -4,7 +4,7 @@ class Player
 {
   public:
     boolean side;
-    boolean panelSize;
+    int panelSize;
     int posX,posY;
     int score;
     Player();
