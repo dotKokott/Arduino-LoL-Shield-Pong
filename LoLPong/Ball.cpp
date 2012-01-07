@@ -1,13 +1,20 @@
-#include "Ball.h"
 #include "Charliplexing.h"
 #include "WProgram.h"
 
-Ball::Ball()
+#include "Game.h"
+#include "Ball.h"
+
+Ball::Ball(Game *g)
 {
-      this->posX = 6;
-      this->posY = 2;
-      this->dirX = 1; 
-      this->dirY = -1; 
+      this->reset();
+      this->game = g;
+}
+
+void Ball::reset()
+{
+  this->posX = 6;
+  this->posY = 2;
+  this->dirY = -1; //random would be cool 
 }
 
 void Ball::update()
@@ -29,19 +36,18 @@ void Ball::checkCollision()
   
   if(expectedX <= 0)
   {
-    //Player left point
+    this->game->ballPassed(LEFT_PLAYER);
   }
   
   if(expectedX > 13)
   {
-    //Player right point
+    this->game->ballPassed(RIGHT_PLAYER);
   }
 
   //PanelCollisionDetection
   
   if((expectedY) < 0 || (expectedY) > 8)
-  {
-    //g.gameOver();
+  {    
     this->dirY = this->dirY * -1;
   }       
 }
