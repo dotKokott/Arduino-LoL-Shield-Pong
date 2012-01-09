@@ -1,6 +1,6 @@
 #pragma once
-
 #include "Player.h"
+
 #define LEFT_PLAYER false
 #define RIGHT_PLAYER true
 

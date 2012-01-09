@@ -7,14 +7,13 @@ void Game::init()
 {
   Player first;
   Player second;
-  first.init(LEFT_PLAYER);
-  second.init(RIGHT_PLAYER);
-  
   this->playerONE = &first;
   this->playerTWO = &second;
+  this->playerONE->init(false);
+  this->playerTWO->init(true);
   
-  Ball ball(this);
-  this->b = &ball; 
+  Ball ball(*this);
+  this->b = &ball;
 
   this->gameSpeed = 1000;
   this->gameRunning = true;

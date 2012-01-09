@@ -5,7 +5,8 @@ class Player
   public:
     boolean side;
     int panelSize;
-    int posX,posY;
+    int posX;
+    int posY;
     int score;
     Player();
     

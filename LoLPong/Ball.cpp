@@ -4,17 +4,18 @@
 #include "Game.h"
 #include "Ball.h"
 
-Ball::Ball(Game *g)
+Ball::Ball(Game &g)
 {
       this->reset();
-      this->game = g;
+      this->game = &g;
 }
 
 void Ball::reset()
 {
   this->posX = 6;
   this->posY = 2;
-  this->dirY = -1; //random would be cool 
+  this->dirY = -1; //random would be cool
+  this->dirX = 1; 
 }
 
 void Ball::update()

@@ -17,5 +17,3 @@ void loop()
   game.render();
   delay(1000);
 }
-
-

@@ -4,9 +4,11 @@
     
 Player::Player()
 {
+  this->side = false;
   this->score = 0;
   this->panelSize = 13;
   this->posY = 0;
+  this->posX = 0;  
 }
 
 void Player::init(boolean playerSide)
