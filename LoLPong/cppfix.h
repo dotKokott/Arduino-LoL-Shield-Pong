@@ -1,3 +1,8 @@
+/*
+  cppfix.h to use new and delete operators on the arduino platform.
+  Thanks to TFrankuz (http://www.avrfreaks.net/index.php?name=PNphpBB2&file=viewtopic&p=410870) and prawnhead (http://arduinoetcetera.blogspot.com/2010/04/implementing-new-and-delete-c.html)
+*/
+
 #ifndef cppfix
 #define cppfix
 

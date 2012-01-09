@@ -6,7 +6,7 @@ Player::Player()
 {
   this->side = false;
   this->score = 0;
-  this->panelSize = 13;
+  this->panelSize = 3;
   this->posY = 0;
   this->posX = 0;  
 }
@@ -14,6 +14,7 @@ Player::Player()
 void Player::init(boolean playerSide)
 {
   this->side = playerSide;
+  this->score = 0;
   if(playerSide)
   {
     this->posX = 13;
@@ -22,12 +23,14 @@ void Player::init(boolean playerSide)
   {
     this->posX = 0;
   }
+  this->posY = 3;
 }
 
 void Player::update() //called each loop, checks input, updates position etc.
 {
   //Read from potentiometer
-  // x = (1023 / 9) * pinRead?
+    int value = analogRead(2);
+    posY = ((float)8 / (float)1023) * value;
 }
 
 void Player::render() //called after update, draws panel on the shield

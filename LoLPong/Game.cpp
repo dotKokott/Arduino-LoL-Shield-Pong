@@ -6,14 +6,14 @@
 
 void Game::init()
 {
-  //this->playerONE = new Player();
-  //this->playerTWO = new Player();
-  this->playerONE->init(false);
-  this->playerTWO->init(true);
+  this->playerONE = new Player();
+  this->playerTWO = new Player();
+  this->playerONE->init(LEFT_PLAYER);
+  this->playerTWO->init(RIGHT_PLAYER);
   
   this->b = new Ball(*this);
 
-  this->gameSpeed = 1000;
+  this->gameSpeed = 100;
   this->gameRunning = true;
 }
 
