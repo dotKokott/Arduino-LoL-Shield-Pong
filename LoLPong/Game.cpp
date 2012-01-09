@@ -1,3 +1,4 @@
+#include "cppfix.h"
 #include "Charliplexing.h"
 #include "WProgram.h"
 #include "Game.h"
@@ -5,15 +6,12 @@
 
 void Game::init()
 {
-  Player first;
-  Player second;
-  this->playerONE = &first;
-  this->playerTWO = &second;
+  //this->playerONE = new Player();
+  //this->playerTWO = new Player();
   this->playerONE->init(false);
   this->playerTWO->init(true);
   
-  Ball ball(*this);
-  this->b = &ball;
+  this->b = new Ball(*this);
 
   this->gameSpeed = 1000;
   this->gameRunning = true;
