@@ -19,8 +19,8 @@ void setup()
 
 void loop()
 {
-  LedSign::Clear();
   game.update();
+  LedSign::Clear();
   game.render();
   delay(game.gameSpeed);
 }
