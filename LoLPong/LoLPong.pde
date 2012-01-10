@@ -11,7 +11,6 @@ Game game;
 
 void setup()
 {
-  Serial.begin(19200);
   randomSeed(analogRead(0));
   LedSign::Init();
   game.init();
