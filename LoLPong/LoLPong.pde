@@ -19,7 +19,6 @@ void setup()
   randomSeed(analogRead(0));
   LedSign::Init();
   game.init();
-  delay(10000000);
 }
 
 void loop()

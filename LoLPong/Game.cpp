@@ -6,6 +6,7 @@
 
 void Game::init()
 {
+  screen.playWelcomeScreen();
   this->playerONE = new Player();
   this->playerTWO = new Player();
   this->playerONE->init(LEFT_PLAYER);
@@ -15,6 +16,8 @@ void Game::init()
 
   this->gameSpeed = 100;
   this->gameRunning = true;
+  
+
 }
 
 void Game::update()
@@ -48,6 +51,7 @@ void Game::ballPassed(boolean side)
     this->playerONE->score++;  
   }  
   this->b->reset();
+  LedSign::Clear();
   screen.playScoreScreen(playerONE->score,playerTWO->score);
 }
 
