@@ -1,5 +1,6 @@
 #pragma once
 #include "Player.h"
+#include "Screen.h"
 
 #define LEFT_PLAYER false
 #define RIGHT_PLAYER true
@@ -9,6 +10,7 @@ class Ball;
 class Game
 {
   public:
+    Screen screen;
     Player* playerONE;
     Player* playerTWO;
     Ball* b;    

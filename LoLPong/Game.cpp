@@ -48,6 +48,7 @@ void Game::ballPassed(boolean side)
     this->playerONE->score++;  
   }  
   this->b->reset();
+  screen.playScoreScreen(playerONE->score,playerTWO->score);
 }
 
 void Game::gameOver()

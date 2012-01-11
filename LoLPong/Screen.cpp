@@ -1,4 +1,5 @@
 #include "Screen.h"
+#include "DrawHelper.h"
 
 Screen::Screen()
 {
@@ -72,6 +73,15 @@ void Screen::loadWelcomeScreen()
   data[13][7] = true;
   data[13][8] = true;
   data[12][8] = true;  
+}
+
+void Screen::playScoreScreen(int score1,int score2)
+{
+  DrawHelper::drawNumber(score1,1,1);
+  DrawHelper::drawLine(6,0,6,8);
+  DrawHelper::drawLine(7,0,7,8);
+  DrawHelper::drawNumber(score2, 9,1);
+  delay(5000);  
 }
 
 void Screen::play(int del)

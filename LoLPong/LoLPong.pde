@@ -11,7 +11,6 @@
 #include "Charliplexing.h"
 #include "WProgram.h"
 #include "Game.h"
-#include "NumberRenderer.h"
 
 Game game;
 
@@ -20,7 +19,6 @@ void setup()
   randomSeed(analogRead(0));
   LedSign::Init();
   game.init();
-  NumberRenderer::drawNumber(0,0,0);
   delay(10000000);
 }
 
