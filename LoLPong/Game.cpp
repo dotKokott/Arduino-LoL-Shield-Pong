@@ -44,11 +44,11 @@ void Game::ballPassed(boolean side)
 {
   if(side)
   {
-    this->playerTWO->score++;
+    this->playerONE->score++;  
   }
   else
-  {
-    this->playerONE->score++;  
+  {    
+    this->playerTWO->score++;
   }  
   this->b->reset();
   LedSign::Clear();

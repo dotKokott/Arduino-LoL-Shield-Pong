@@ -67,16 +67,16 @@ class DrawHelper
     
     static void draw1(int posX, int posY)
     {
-      drawLine(posX +1,posY, posX +1, posY + 6);            
+      drawLine(posX +1,posY, posX +1, posY + 7);            
     }
     
     static void draw2(int posX, int posY)
     {
       drawLine(posX,posY,posX+3,posY);
       drawLine(posX+3,posY,posX +3, posY+3);
-      drawLine(posX,posY +4, posX+4, posY+3);
-      drawLine(posX,posY+4,posX,posY+7);
-      drawLine(posX,posY+7,posX + 3,posY +7);
+      drawLine(posX,posY +3, posX+4, posY+3);
+      drawLine(posX,posY+3,posX,posY+6);
+      drawLine(posX,posY+6,posX + 4,posY +6);
     }
     
     static void draw3(int posX, int posY)
@@ -84,7 +84,7 @@ class DrawHelper
       drawLine(posX+3,posY,posX+3,posY+6);
       drawLine(posX,posY,posX+3,posY);
       drawLine(posX,posY+3,posX+3,posY+3);
-      drawLine(posX,posY+6,posX+3,posY+6);
+      drawLine(posX,posY+6,posX+4,posY+6);
     }    
     
     static void draw4(int posX, int posY)
@@ -92,31 +92,31 @@ class DrawHelper
       drawLine(posX,posY,posX,posY+3);
       drawLine(posX+3,posY,posX+3,posY+3);
       drawLine(posX,posY+3,posX+3,posY+3);
-      drawLine(posX+3,posY+3,posX+3,posY+6);
+      drawLine(posX+3,posY+3,posX+3,posY+7);
     }
 
     static void draw5(int posX, int posY)
     {
-      drawLine(posX,posY,posX+3,posY);
+      drawLine(posX,posY,posX+4,posY);
       drawLine(posX,posY,posX, posY+3);
-      drawLine(posX,posY +4, posX+4, posY+3);
-      drawLine(posX +3,posY+4,posX +3,posY+7);
-      drawLine(posX,posY+7,posX + 3,posY +7);      
+      drawLine(posX,posY +3, posX+3, posY+3);
+      drawLine(posX +3,posY+3,posX +3,posY+6);
+      drawLine(posX,posY+6,posX + 4,posY +6);      
     }
 
     static void draw6(int posX, int posY)
     {
-      drawLine(posX,posY,posX+3,posY);  
+      drawLine(posX,posY,posX+4,posY);  
       drawLine(posX,posY,posX,posY+6);
       drawLine(posX,posY+3,posX+3,posY+3);
       drawLine(posX+3,posY+3,posX+3,posY+6);
-      drawLine(posX,posY+6,posX+3,posY+6);
+      drawLine(posX,posY+6,posX+4,posY+6);
     }
 
     static void draw7(int posX, int posY)
     {
       drawLine(posX,posY,posX+3,posY);
-      drawLine(posX+3,posY,posX+3,posY+6);
+      drawLine(posX+3,posY,posX+3,posY+7);
     }
 
     static void draw8(int posX, int posY)
@@ -125,7 +125,7 @@ class DrawHelper
       drawLine(posX,posY+3,posX+3,posY+3);
       drawLine(posX,posY+6,posX+3,posY+6);
       drawLine(posX,posY,posX,posY+6);
-      drawLine(posX+3,posY,posX+3,posY+6);      
+      drawLine(posX+3,posY,posX+3,posY+7);      
     }
 
     static void draw9(int posX, int posY)
@@ -134,6 +134,6 @@ class DrawHelper
       drawLine(posX,posY+3,posX+3,posY+3);  
       drawLine(posX,posY+6,posX+3,posY+6);
       drawLine(posX,posY,posX,posY+3);
-      drawLine(posX+3,posY,posX+3,posY+6);
+      drawLine(posX+3,posY,posX+3,posY+7);
     }
 };
