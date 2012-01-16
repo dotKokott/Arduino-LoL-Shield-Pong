@@ -18,13 +18,12 @@ void setup()
 {
   randomSeed(analogRead(0));
   LedSign::Init();
-  game.init();
+  game.init(); //Initializes the game, sets the players on the right positions etc. and then starts the game
 }
 
 void loop()
 {
-  game.update();
-  LedSign::Clear();
-  game.render();
+  game.update(); //updates the game, checks player input and moves the ball
+  game.render(); //renders the game, draws the players and the ball
   delay(game.gameSpeed);
 }

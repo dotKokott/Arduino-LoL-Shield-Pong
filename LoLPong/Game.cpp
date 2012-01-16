@@ -37,12 +37,10 @@ void Game::update()
 
 void Game::render()
 {
-  if(this->gameRunning)
-  {
-    this->playerONE->render();
-    this->playerTWO->render();
-    this->b->render();
-  }
+  LedSign::Clear();
+  this->playerONE->render();
+  this->playerTWO->render();
+  this->b->render();
 }
 
 void Game::ballPassed(boolean side)

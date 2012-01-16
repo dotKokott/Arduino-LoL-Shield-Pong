@@ -66,7 +66,7 @@ void Screen::playScoreScreen(int score1,int score2)
     {
       drawScores(score1,score2);
       LedSign::Clear();
-      delay(700);
+      delay(500);
     }
   }
   else

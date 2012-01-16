@@ -29,17 +29,17 @@ void Ball::init()
 
 void Ball::update()
 {
-    if(tick==ballDelay)
-    {      
-      this->checkCollision();
-      this->posX += this->dirX;
-      this->posY += this->dirY;
-      tick = 0;
-    }
-    else
-    {
-      tick++;
-    }    
+  if(tick==ballDelay)
+  {      
+    this->checkCollision();
+    this->posX += this->dirX;
+    this->posY += this->dirY;
+    tick = 0;
+  }
+  else
+  {
+    tick++;
+  }    
 }
 
 void Ball::render()
@@ -49,12 +49,12 @@ void Ball::render()
 
 void Ball::increaseSpeed()
 {
-  if(ballDelay>1) ballDelay--; 
+  if(ballDelay > 1) ballDelay--; 
 }
 
 void Ball::checkCollision()
 { 
-     //Top-Bottom wall collision
+  //Top-Bottom wall collision
   if((posY + dirY) < 0 || (posY + dirY) > 8)
   {    
     this->dirY = this->dirY * -1;
