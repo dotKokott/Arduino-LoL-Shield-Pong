@@ -9,30 +9,25 @@ Game::Game()
   this->playerONE = new Player(LEFT_PLAYER);
   this->playerTWO = new Player(RIGHT_PLAYER);
   this->b = new Ball(*this);
-  
-  init();
 }
 
 void Game::init()
-{
+{  
   screen.playWelcomeScreen();
-  
   this->playerONE->init();
   this->playerTWO->init(); 
   this->b->init();
-  
+
   this->gameSpeed = 100;
   this->gameRunning = true; 
 }
 
 void Game::update()
 {
-  if(this->gameRunning)
-  {
-    this->playerONE->update();
-    this->playerTWO->update();
-    this->b->update();        
-  }
+  this->playerONE->update();
+  this->playerTWO->update();
+
+  this->b->update();        
 }
 
 void Game::render()

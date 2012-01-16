@@ -1,15 +1,10 @@
 #include "Screen.h"
 #include "DrawHelper.h"
 
-Screen::Screen()
-{
-}
-
 void Screen::playWelcomeScreen()
 {
-  delay(1000);
   //P
-  LedSign::Set(1,5, true);
+  LedSign::Set(1,5, true);  
   LedSign::Set(1,4, true);
   LedSign::Set(1,3, true);
   LedSign::Set(1,2, true);
@@ -19,8 +14,8 @@ void Screen::playWelcomeScreen()
   LedSign::Set(3,2, true);
   LedSign::Set(3,3, true);
   LedSign::Set(2,3, true);
-
-  delay(1000);  
+  
+  delay(1000);
   //o
   LedSign::Set(3,7, true);
   LedSign::Set(3,6, true);  
@@ -62,11 +57,12 @@ void Screen::playScoreScreen(int score1,int score2)
 {
   if((score1 == 9) || (score2 == 9))
   {
-    for(int i = 0; i < 10; i++)
+    for(int i = 0; i < 6; i++)
     {
-      drawScores(score1,score2);
-      LedSign::Clear();
       delay(500);
+      drawScores(score1,score2);      
+      delay(500);
+      LedSign::Clear();
     }
   }
   else
