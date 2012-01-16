@@ -10,6 +10,7 @@ class Ball;
 class Game
 {
   public:
+    Game();
     Screen screen;
     Player* playerONE;
     Player* playerTWO;
@@ -18,8 +19,8 @@ class Game
     int gameSpeed;
     
     void init(void);
+    void reset(void);
     void update(void);
     void render(void);
-    void ballPassed(boolean side);
-    void gameOver(void);
+    void ballPassed(boolean side);    
 };

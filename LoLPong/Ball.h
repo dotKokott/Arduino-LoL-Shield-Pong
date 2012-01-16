@@ -12,7 +12,7 @@ class Ball
     Game* game;
     
     Ball(Game &g);
-    void reset(void);
+    void init(void);
     void update(void);
     void render(void);    
   private:

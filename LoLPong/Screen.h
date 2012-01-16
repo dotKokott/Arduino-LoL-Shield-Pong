@@ -6,7 +6,8 @@ class Screen
 {
   public:
     Screen();
-    //~Screen();
     void playScoreScreen(int score1, int score2);
-    void playWelcomeScreen();    
+    void playWelcomeScreen(void);    
+  private:
+    void drawScores(int score1, int score2);
 };

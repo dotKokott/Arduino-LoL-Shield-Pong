@@ -60,9 +60,26 @@ void Screen::playWelcomeScreen()
 
 void Screen::playScoreScreen(int score1,int score2)
 {
+  if((score1 == 9) || (score2 == 9))
+  {
+    for(int i = 0; i < 10; i++)
+    {
+      drawScores(score1,score2);
+      LedSign::Clear();
+      delay(700);
+    }
+  }
+  else
+  {
+    drawScores(score1,score2);
+  }
+  delay(3000);  
+}
+
+void Screen::drawScores(int score1, int score2)
+{
   DrawHelper::drawNumber(score1,1,1);
   DrawHelper::drawLine(6,0,6,9);
   DrawHelper::drawLine(7,0,7,9);
-  DrawHelper::drawNumber(score2, 9,1);
-  delay(5000);  
+  DrawHelper::drawNumber(score2, 9,1);  
 }

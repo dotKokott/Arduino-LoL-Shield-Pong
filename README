@@ -2,3 +2,8 @@ This is a Pong-Game for the Arduino microcontroller. The display will be a LoL-S
 As soon I finished the code, I will upload instructions how to build the hardware.
 
 PS: This is my first attempt in C++. So any recommondations about my code are welcome! :)
+
+To-Do
+-I noticed some flickering. Maybe double-buffering will help
+-Add a single player mode
+-I think the max ball speed is a bit too low

@@ -4,20 +4,25 @@
 #include "Game.h"
 #include "Ball.h"
 
+Game::Game()
+{
+  this->playerONE = new Player(LEFT_PLAYER);
+  this->playerTWO = new Player(RIGHT_PLAYER);
+  this->b = new Ball(*this);
+  
+  init();
+}
+
 void Game::init()
 {
   screen.playWelcomeScreen();
-  this->playerONE = new Player();
-  this->playerTWO = new Player();
-  this->playerONE->init(LEFT_PLAYER);
-  this->playerTWO->init(RIGHT_PLAYER);
   
-  this->b = new Ball(*this);
-
+  this->playerONE->init();
+  this->playerTWO->init(); 
+  this->b->init();
+  
   this->gameSpeed = 100;
-  this->gameRunning = true;
-  
-
+  this->gameRunning = true; 
 }
 
 void Game::update()
@@ -50,12 +55,13 @@ void Game::ballPassed(boolean side)
   {    
     this->playerTWO->score++;
   }  
-  this->b->reset();
+  
+  this->b->init();
+  
   LedSign::Clear();
   screen.playScoreScreen(playerONE->score,playerTWO->score);
-}
-
-void Game::gameOver()
-{
-  LedSign::Clear();
+  if((playerONE->score == 9) || (playerTWO->score == 9))
+  {
+    init();
+  }  
 }

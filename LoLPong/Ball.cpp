@@ -6,8 +6,8 @@
 
 Ball::Ball(Game &g)
 {
-      this->reset();
-      this->game = &g;
+  this->game = &g;
+  this->init();
 }
 
 int Ball::getRandomDirection()
@@ -17,13 +17,13 @@ int Ball::getRandomDirection()
   if(rand == 2) return -1;
 }
 
-void Ball::reset()
+void Ball::init()
 {
   this->tick = 0;
   this->ballDelay = 5;
   this->posX = 6;
   this->posY = 4;
-  this->dirY = getRandomDirection(); //random would be cool
+  this->dirY = getRandomDirection(); 
   this->dirX = getRandomDirection(); 
 }
 
