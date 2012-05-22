@@ -1,7 +1,7 @@
 This is a Pong-Game for the Arduino microcontroller. The display will be a LoL-Shield from JimmiePRodgers.
 As soon I finished the code, I will upload instructions how to build the hardware.
 
-PS: This is my first attempt in C++. So any recommondations about my code are welcome! :)
+PS: This is my first attempt in C++. So any recommendations about my code are welcome! :)
 
 To-Do
 -I noticed some flickering. Maybe double-buffering will help
